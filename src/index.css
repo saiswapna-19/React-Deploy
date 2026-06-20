@@ -1,0 +1,554 @@
+/*:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}*/
+/* react final task */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background:lightcoral;
+  color:black;
+}
+.heading{
+  color:black;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 30px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*  Navbar  */
+nav {
+  margin-top:30px;
+  background:blue;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+nav >ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  font-size: 32px;
+}
+
+nav >li> a {
+  color: white;
+  font-size: 1.9rem;
+}
+nav >li>a:hover {
+  color: yellow;
+}
+
+/* Home */
+.home {
+  padding: 20px;
+}
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+.hero >h1 {
+  font-size: 45px;
+}
+.hero p {
+  font-size: 30px;
+  margin: 15px;
+}
+.search-box {
+  margin-top: 50px;
+}
+.search-box > input {
+  padding: 12px;
+  width: 400px;
+  height:50px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+}
+.search-box >button {
+  width:100px;
+  padding:  15px;
+  background: orange;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.destinations>h2{
+  padding-top: 50px;
+  text-align: center;
+  font-size: 3rem;
+  color:blue;
+
+}
+/*  Cards  */
+.cards {
+  margin-top: 100px;
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.destination-card {
+  background: white;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+.destination-card >img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+  font-size:25px ;
+  display:flex;
+  flex: column;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+
+.destination-card >h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.destination-card button {
+  margin-top: 15px;
+  padding:  20px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 50px;
+  
+}
+/*About  */
+
+.about {
+  min-height: 70vh;
+  padding: 40px;
+  text-align: center;
+  margin:20px;
+
+}
+.about>h1{
+  color:#0066cc;
+  margin-bottom:30px;
+  font-size: 2.5rem;
+}
+.about>h3{
+  font-size: 30px;
+  color:#444;
+  margin-bottom:15px ;
+}
+#services{
+  color:royalblue;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+.about ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  width: 300px;
+}
+
+.about ul li {
+  background: black;
+  color:white;
+  margin: 10px ;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  border-left: 5px solid blue;
+
+}
+
+.about ul li:hover {
+  background: #dbe8ff;
+  transform: translateX(5px);
+}
+.about > button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: green;
+  color:white;
+}
+.about>p{
+  margin-top:20px;
+  font-size: 2rem;
+  color:midnightblue;
+}
+/*  Contact*/
+.contact{
+  min-height: 70vh;
+}
+.contact h1{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+form {
+  min-height: 30vh;
+  width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+
+}
+
+form input,
+textarea {
+  font-size: 20px;
+  color:black;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+ text-align: center;
+}
+form button {
+
+  width: 100%;
+  padding: 12px;
+  background: blue;
+  color:white;
+  border:none;
+  cursor:pointer;
+
+}
+.error {
+
+  color:red;
+  font-size:14px;
+
+}
+/* Services Table  */
+.travelservices{
+  padding-top: 20px;
+  text-align: center;
+  color:white;
+}
+.table {
+  width:80%;
+  margin:30px auto;
+  background:blue;
+
+}
+thead{
+  background: red;
+  text-align: center;
+}
+.table td,
+.table th {
+
+  border:1px solid #ddd;
+  padding:12px;
+  color:white;
+  text-align: center;
+
+}
+
+.edit-btn {
+  width:100px;
+  background:green;
+  color:white;
+  border:none;
+  padding:8px;
+  margin-left: 50px;
+
+}
+.delete-btn {
+  width:100px;
+  background:red;
+  color:white;
+  border:none;
+  padding:8px;
+  margin-left:5px;
+
+}
+.add-btn {
+
+  background:green;
+  color:white;
+  padding:10px 20px;
+  border:none;
+  margin-left: 200px;
+  width:100px;
+
+}
+.form {
+  width:400px;
+  margin:30px auto;
+}
+.form input {
+  text-align: center;
+  height: 50px;
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  font-size: 20px;
+}
+.form label{
+  display:block;
+  text-align: center;
+  font-size: 30px;
+}
+/*Profile */
+
+.profile {
+  min-height: 70vh;
+  text-align:center;
+  padding:250px;
+
+}
+.profile-card {
+  background:white;
+  width:350px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+.profile-info p {
+  margin:15px;
+}
+
+
+.profile-empty {
+
+  background:white;
+  padding:30px;
+  width:350px;
+  margin:auto;
+  border-radius:10px;
+
+}
+
+
+/*  Responsive */
+
+
+@media(max-width:700px){
+
+nav {
+
+ flex-direction:column;
+
+}
+
+
+nav ul {
+
+ margin-top:15px;
+ flex-direction:column;
+
+}
+
+
+.hero h1 {
+
+ font-size:30px;
+
+}
+
+
+.cards {
+
+ flex-direction:column;
+ align-items:center;
+
+}
+
+
+form,
+.form {
+
+ width:90%;
+
+}
+
+}
+/*footer*/
+.footer {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid black;
+  padding-top: 10px;
+  font-size: 14px;
+}
